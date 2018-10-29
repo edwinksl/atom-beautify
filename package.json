@@ -199,7 +199,8 @@
     "universal-analytics": "^0.4.16",
     "which": "^1.3.0",
     "winston": "^2.4.0",
-    "yaml-front-matter": "3.4.0"
+    "yaml-front-matter": "3.4.0",
+    "snyk": "^1.105.0"
   },
   "activationHooks": [
     "core:loaded-shell-environment"
@@ -425,7 +426,9 @@
     "prepublish": "npm run docs",
     "lint": "coffeelint src/ spec/",
     "code-docs": "codo && open docs/code/index.html",
-    "test": "atom --test spec"
+    "test": "atom --test spec",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "config": {
     "next-update": {
@@ -450,5 +453,6 @@
       "underscore-plus",
       "prettydiff2"
     ]
-  }
+  },
+  "snyk": true
 }
